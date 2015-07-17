@@ -94,8 +94,10 @@ class SiteController extends Controller
         return $this->render('about');
     }
     
-    public function actionFirst()
+    public function actionFirst($id = 1)
     {
-    	echo 1;
+//     	return $this->renderPartial('first');//不加载模板
+//     	return $this->render('first');//加载XX模板
+
     }
 }
