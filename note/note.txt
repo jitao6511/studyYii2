@@ -1,0 +1,4 @@
+Yii::$app->request->queryParams//route
+return $this->renderPartial('first');//不加载模板
+return $this->render('first');//加载XX模板
+Yii::$app->request->post()//post数据
