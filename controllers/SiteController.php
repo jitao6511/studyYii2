@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\EntryForm;
 
 class SiteController extends Controller
 {
@@ -98,6 +99,21 @@ class SiteController extends Controller
     {
 //     	return $this->renderPartial('first');//不加载模板
 //     	return $this->render('first');//加载XX模板
+echo 1;
 
+    }
+    
+    public function actionEntry()
+    {
+    	$entryModel = new EntryForm();
+//     	print_r($entryModel);exit;
+    	if($entryModel->load(Yii::$app->request->post()) && $entryModel->validate())
+    	{
+ 			return $this->render('entry-confirm',['model' => $entryModel]);   		
+    	}
+    	else
+    	{
+    		return $this->render('entry',['model' => $entryModel]);
+    	}
     }
 }
