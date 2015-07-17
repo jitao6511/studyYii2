@@ -107,6 +107,7 @@ echo 1;
     {
     	$entryModel = new EntryForm();
 //     	print_r($entryModel);exit;
+		//验证是否有post数据
     	if($entryModel->load(Yii::$app->request->post()) && $entryModel->validate())
     	{
  			return $this->render('entry-confirm',['model' => $entryModel]);   		
