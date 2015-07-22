@@ -1,6 +1,8 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
+// Yii::$classMap['Curl'] = '@app/common/Curl.php';
+
 
 $config = [
     'id' => 'basic',
